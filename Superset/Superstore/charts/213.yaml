@@ -1,0 +1,144 @@
+slice_name: "\u041F\u0440\u0438\u0431\u044B\u043B\u044C \u043F\u043E \u0441\u0435\u0433\
+  \u043C\u0435\u043D\u0442\u0430\u043C \u043A\u043B\u0438\u0435\u043D\u0442\u043E\u0432\
+  \ \u0438 \u043A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\u044F\u043C \u0442\u043E\
+  \u0432\u0430\u0440\u043E\u0432 \u0437\u0430 \u0432\u0441\u0435 \u0432\u0440\u0435\
+  \u043C\u044F"
+description: null
+certified_by: null
+certification_details: null
+viz_type: pivot_table_v2
+params:
+  datasource: 59__table
+  viz_type: pivot_table_v2
+  slice_id: 213
+  groupbyColumns:
+  - expressionType: SQL
+    label: Customer Segment
+    sqlExpression: customer_segment
+  groupbyRows:
+  - expressionType: SQL
+    label: Product Category
+    sqlExpression: product_category
+  - expressionType: SQL
+    label: Product Subcategory
+    sqlExpression: product_subcategory
+  temporal_columns_lookup:
+    order_date: true
+    order_month_date: true
+    ship_date: true
+  metrics:
+  - aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: profit
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 826
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: REAL
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: "\u041F\u0440\u0438\u0431\u044B\u043B\u044C"
+    optionName: metric_eixmdih6s4_xqfevfwhwhe
+    sqlExpression: null
+  metricsLayout: COLUMNS
+  adhoc_filters:
+  - expressionType: SIMPLE
+    subject: order_date
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_bhmbiic9qrm_8ux0w6qw4n9
+  row_limit: 10000
+  order_desc: true
+  aggregateFunction: Sum
+  rowTotals: true
+  rowSubTotals: true
+  colTotals: true
+  colSubTotals: false
+  transposePivot: false
+  combineMetric: false
+  valueFormat: SMART_NUMBER
+  date_format: smart_date
+  rowOrder: key_a_to_z
+  colOrder: key_a_to_z
+  conditional_formatting:
+  - colorScheme: '#ACE1C4'
+    column: "\u041F\u0440\u0438\u0431\u044B\u043B\u044C"
+    operator: '>'
+    targetValue: 0
+  - colorScheme: '#EFA1AA'
+    column: "\u041F\u0440\u0438\u0431\u044B\u043B\u044C"
+    operator: <
+    targetValue: 0
+  extra_form_data: {}
+  dashboards:
+  - 12
+query_context: "{\"datasource\":{\"id\":59,\"type\":\"table\"},\"force\":false,\"\
+  queries\":[{\"filters\":[{\"col\":\"order_date\",\"op\":\"TEMPORAL_RANGE\",\"val\"\
+  :\"No filter\"}],\"extras\":{\"having\":\"\",\"where\":\"\"},\"applied_time_extras\"\
+  :{},\"columns\":[{\"expressionType\":\"SQL\",\"label\":\"Customer Segment\",\"sqlExpression\"\
+  :\"customer_segment\"},{\"expressionType\":\"SQL\",\"label\":\"Product Category\"\
+  ,\"sqlExpression\":\"product_category\"},{\"expressionType\":\"SQL\",\"label\":\"\
+  Product Subcategory\",\"sqlExpression\":\"product_subcategory\"}],\"metrics\":[{\"\
+  aggregate\":\"SUM\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"profit\",\"description\":null,\"expression\"\
+  :null,\"filterable\":true,\"groupby\":true,\"id\":826,\"is_certified\":false,\"\
+  is_dttm\":false,\"python_date_format\":null,\"type\":\"REAL\",\"type_generic\":0,\"\
+  verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\"\
+  :\"SIMPLE\",\"hasCustomLabel\":true,\"label\":\"\u041F\u0440\u0438\u0431\u044B\u043B\
+  \u044C\",\"optionName\":\"metric_eixmdih6s4_xqfevfwhwhe\",\"sqlExpression\":null}],\"\
+  orderby\":[[{\"aggregate\":\"SUM\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"profit\",\"description\":null,\"expression\"\
+  :null,\"filterable\":true,\"groupby\":true,\"id\":826,\"is_certified\":false,\"\
+  is_dttm\":false,\"python_date_format\":null,\"type\":\"REAL\",\"type_generic\":0,\"\
+  verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\"\
+  :\"SIMPLE\",\"hasCustomLabel\":true,\"label\":\"\u041F\u0440\u0438\u0431\u044B\u043B\
+  \u044C\",\"optionName\":\"metric_eixmdih6s4_xqfevfwhwhe\",\"sqlExpression\":null},false]],\"\
+  annotation_layers\":[],\"row_limit\":10000,\"series_limit\":0,\"order_desc\":true,\"\
+  url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"form_data\":{\"\
+  datasource\":\"59__table\",\"viz_type\":\"pivot_table_v2\",\"slice_id\":213,\"groupbyColumns\"\
+  :[{\"expressionType\":\"SQL\",\"label\":\"Customer Segment\",\"sqlExpression\":\"\
+  customer_segment\"}],\"groupbyRows\":[{\"expressionType\":\"SQL\",\"label\":\"Product\
+  \ Category\",\"sqlExpression\":\"product_category\"},{\"expressionType\":\"SQL\"\
+  ,\"label\":\"Product Subcategory\",\"sqlExpression\":\"product_subcategory\"}],\"\
+  temporal_columns_lookup\":{\"order_date\":true,\"order_month_date\":true,\"ship_date\"\
+  :true},\"metrics\":[{\"aggregate\":\"SUM\",\"column\":{\"advanced_data_type\":null,\"\
+  certification_details\":null,\"certified_by\":null,\"column_name\":\"profit\",\"\
+  description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\"\
+  :826,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\"\
+  :\"REAL\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"\
+  datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"\
+  label\":\"\u041F\u0440\u0438\u0431\u044B\u043B\u044C\",\"optionName\":\"metric_eixmdih6s4_xqfevfwhwhe\"\
+  ,\"sqlExpression\":null}],\"metricsLayout\":\"COLUMNS\",\"adhoc_filters\":[{\"expressionType\"\
+  :\"SIMPLE\",\"subject\":\"order_date\",\"operator\":\"TEMPORAL_RANGE\",\"comparator\"\
+  :\"No filter\",\"clause\":\"WHERE\",\"sqlExpression\":null,\"isExtra\":false,\"\
+  isNew\":false,\"datasourceWarning\":false,\"filterOptionName\":\"filter_bhmbiic9qrm_8ux0w6qw4n9\"\
+  }],\"row_limit\":10000,\"order_desc\":true,\"aggregateFunction\":\"Sum\",\"rowTotals\"\
+  :true,\"rowSubTotals\":true,\"colTotals\":true,\"colSubTotals\":false,\"transposePivot\"\
+  :false,\"combineMetric\":false,\"valueFormat\":\"SMART_NUMBER\",\"date_format\"\
+  :\"smart_date\",\"rowOrder\":\"key_a_to_z\",\"colOrder\":\"key_a_to_z\",\"conditional_formatting\"\
+  :[{\"colorScheme\":\"#ACE1C4\",\"column\":\"\u041F\u0440\u0438\u0431\u044B\u043B\
+  \u044C\",\"operator\":\">\",\"targetValue\":0},{\"colorScheme\":\"#EFA1AA\",\"column\"\
+  :\"\u041F\u0440\u0438\u0431\u044B\u043B\u044C\",\"operator\":\"<\",\"targetValue\"\
+  :0}],\"extra_form_data\":{},\"dashboards\":[12],\"force\":false,\"result_format\"\
+  :\"json\",\"result_type\":\"full\"},\"result_format\":\"json\",\"result_type\":\"\
+  full\"}"
+cache_timeout: null
+uuid: f2299bd0-8d95-4c02-b961-f1153d5c8252
+version: 1.0.0
+dataset_uuid: 877d9add-cc7e-4543-9600-221172e84883

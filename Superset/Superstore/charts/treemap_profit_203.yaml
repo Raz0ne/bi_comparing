@@ -1,0 +1,111 @@
+slice_name: treemap profit
+description: null
+certified_by: null
+certification_details: null
+viz_type: treemap_v2
+params:
+  datasource: 59__table
+  viz_type: treemap_v2
+  slice_id: 203
+  groupby:
+  - province
+  metric:
+    expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: profit
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 826
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: REAL
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: "\u041F\u0440\u0438\u0431\u044B\u043B\u044C"
+    optionName: metric_ok997sqzhnq_rbh5tpup28n
+  row_limit: 10000
+  sort_by_metric: false
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_t1fxg1nflw_vnze9s8ofxj
+    isExtra: false
+    isNew: false
+    operator: TEMPORAL_RANGE
+    sqlExpression: null
+    subject: order_date
+  - clause: WHERE
+    comparator: null
+    datasourceWarning: false
+    expressionType: SQL
+    filterOptionName: filter_oi11wy62ma_48hk3egk5dv
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: "DATE(TO_CHAR(order_date, 'YYYY-mm-01')) = \n  DATE('\n{% if filter_values('month_date')|length\
+      \ %}\n\t{{ filter_values('month_date')[0] }}\n{% else %}\n\t2010-04-01\n{% endif\
+      \ %}\n')"
+    subject: null
+  color_scheme: supersetColors
+  show_labels: true
+  show_upper_labels: true
+  label_type: key_value
+  number_format: $,.2f
+  date_format: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 12
+query_context: "{\"datasource\":{\"id\":59,\"type\":\"table\"},\"force\":false,\"\
+  queries\":[{\"filters\":[{\"col\":\"order_date\",\"op\":\"TEMPORAL_RANGE\",\"val\"\
+  :\"No filter\"}],\"extras\":{\"having\":\"\",\"where\":\"(DATE(TO_CHAR(order_date,\
+  \ 'YYYY-mm-01')) = \\n  DATE('\\n{% if filter_values('month_date')|length %}\\n\\\
+  t{{ filter_values('month_date')[0] }}\\n{% else %}\\n\\t2010-04-01\\n{% endif %}\\\
+  n'))\"},\"applied_time_extras\":{},\"columns\":[\"province\"],\"metrics\":[{\"expressionType\"\
+  :\"SIMPLE\",\"column\":{\"advanced_data_type\":null,\"certification_details\":null,\"\
+  certified_by\":null,\"column_name\":\"profit\",\"description\":null,\"expression\"\
+  :null,\"filterable\":true,\"groupby\":true,\"id\":826,\"is_certified\":false,\"\
+  is_dttm\":false,\"python_date_format\":null,\"type\":\"REAL\",\"type_generic\":0,\"\
+  verbose_name\":null,\"warning_markdown\":null},\"aggregate\":\"SUM\",\"sqlExpression\"\
+  :null,\"datasourceWarning\":false,\"hasCustomLabel\":true,\"label\":\"\u041F\u0440\
+  \u0438\u0431\u044B\u043B\u044C\",\"optionName\":\"metric_ok997sqzhnq_rbh5tpup28n\"\
+  }],\"annotation_layers\":[],\"row_limit\":10000,\"series_limit\":0,\"order_desc\"\
+  :true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"form_data\"\
+  :{\"datasource\":\"59__table\",\"viz_type\":\"treemap_v2\",\"slice_id\":203,\"groupby\"\
+  :[\"province\"],\"metric\":{\"expressionType\":\"SIMPLE\",\"column\":{\"advanced_data_type\"\
+  :null,\"certification_details\":null,\"certified_by\":null,\"column_name\":\"profit\"\
+  ,\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"\
+  id\":826,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"\
+  type\":\"REAL\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"\
+  aggregate\":\"SUM\",\"sqlExpression\":null,\"datasourceWarning\":false,\"hasCustomLabel\"\
+  :true,\"label\":\"\u041F\u0440\u0438\u0431\u044B\u043B\u044C\",\"optionName\":\"\
+  metric_ok997sqzhnq_rbh5tpup28n\"},\"row_limit\":10000,\"sort_by_metric\":false,\"\
+  adhoc_filters\":[{\"clause\":\"WHERE\",\"comparator\":\"No filter\",\"datasourceWarning\"\
+  :false,\"expressionType\":\"SIMPLE\",\"filterOptionName\":\"filter_t1fxg1nflw_vnze9s8ofxj\"\
+  ,\"isExtra\":false,\"isNew\":false,\"operator\":\"TEMPORAL_RANGE\",\"sqlExpression\"\
+  :null,\"subject\":\"order_date\"},{\"clause\":\"WHERE\",\"comparator\":null,\"datasourceWarning\"\
+  :false,\"expressionType\":\"SQL\",\"filterOptionName\":\"filter_oi11wy62ma_48hk3egk5dv\"\
+  ,\"isExtra\":false,\"isNew\":false,\"operator\":null,\"sqlExpression\":\"DATE(TO_CHAR(order_date,\
+  \ 'YYYY-mm-01')) = \\n  DATE('\\n{% if filter_values('month_date')|length %}\\n\\\
+  t{{ filter_values('month_date')[0] }}\\n{% else %}\\n\\t2010-04-01\\n{% endif %}\\\
+  n')\",\"subject\":null}],\"color_scheme\":\"supersetColors\",\"show_labels\":true,\"\
+  show_upper_labels\":true,\"label_type\":\"key_value\",\"number_format\":\"$,.2f\"\
+  ,\"date_format\":\"smart_date\",\"extra_form_data\":{},\"dashboards\":[12],\"force\"\
+  :false,\"result_format\":\"json\",\"result_type\":\"full\"},\"result_format\":\"\
+  json\",\"result_type\":\"full\"}"
+cache_timeout: null
+uuid: c00bd4e7-aba7-49c7-a3dc-c070de47a41b
+version: 1.0.0
+dataset_uuid: 877d9add-cc7e-4543-9600-221172e84883

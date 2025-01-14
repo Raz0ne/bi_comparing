@@ -1,0 +1,244 @@
+slice_name: "\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430 \u043F\u043E\
+  \ \u043A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\u044F\u043C"
+description: null
+certified_by: null
+certification_details: null
+viz_type: time_table
+params:
+  datasource: 59__table
+  viz_type: time_table
+  slice_id: 211
+  granularity_sqla: order_month_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  metrics:
+  - aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: profit
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 826
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: REAL
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: profit
+    optionName: metric_z9is6vn3e8_maslczw5zu
+    sqlExpression: null
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    datasourceWarning: false
+    expressionType: SQL
+    filterOptionName: filter_0c62d5ybilq_3k7k62c5wcy
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: "DATE(DATE_TRUNC('month', order_date)) between \n  DATE('\n{% if\
+      \ filter_values('month_date')|length %}\n\t{{ filter_values('month_date')[0]\
+      \ }}\n{% else %}\n\t2011-12-01\n{% endif %}\n') - interval '1 year' \n  and\
+      \ DATE('\n{% if filter_values('month_date')|length %}\n\t{{ filter_values('month_date')[0]\
+      \ }}\n{% else %}\n\t2011-12-01\n{% endif %}\n')"
+    subject: null
+  groupby:
+  - expressionType: SQL
+    label: Product Category
+    sqlExpression: product_category
+    datasourceWarning: false
+  column_collection:
+  - bounds:
+    - null
+    - null
+    colType: time
+    comparisonType: value
+    d3format: $,.2f
+    dateFormat: ''
+    height: ''
+    key: q_42ALy9oN-
+    label: "\u041F\u0440\u0435\u0434. \u0433\u043E\u0434"
+    popoverVisible: true
+    showYAxis: false
+    timeLag: 12
+    timeRatio: ''
+    tooltip: ''
+    width: ''
+    yAxisBounds:
+    - null
+    - null
+  - bounds:
+    - null
+    - null
+    colType: time
+    comparisonType: value
+    d3format: $,.2f
+    dateFormat: ''
+    height: ''
+    key: WEGU6yVN4_I
+    label: "\u0422\u0435\u043A. \u0433\u043E\u0434"
+    popoverVisible: true
+    showYAxis: false
+    timeLag: 0
+    timeRatio: ''
+    tooltip: ''
+    width: ''
+    yAxisBounds:
+    - null
+    - null
+  - bounds:
+    - -1
+    - 1
+    colType: time
+    comparisonType: perc_change
+    d3format: .2%
+    dateFormat: ''
+    height: ''
+    key: TEMvOnAgscZ
+    label: YoY
+    popoverVisible: true
+    showYAxis: false
+    timeLag: 12
+    timeRatio: ''
+    tooltip: ''
+    width: ''
+    yAxisBounds:
+    - null
+    - null
+  - bounds:
+    - null
+    - null
+    colType: contrib
+    comparisonType: ''
+    d3format: .2%
+    dateFormat: ''
+    height: ''
+    key: s9cXOeGbtxn
+    label: "\u0412\u043A\u043B\u0430\u0434"
+    popoverVisible: true
+    showYAxis: false
+    timeLag: 0
+    timeRatio: ''
+    tooltip: ''
+    width: ''
+    yAxisBounds:
+    - null
+    - null
+  - bounds:
+    - null
+    - null
+    colType: spark
+    comparisonType: value
+    d3format: $,.2f
+    dateFormat: '%-Y %-b'
+    height: ''
+    key: oYO35xof6sL
+    label: "\u0422\u0440\u0435\u043D\u0434"
+    popoverVisible: true
+    showYAxis: true
+    timeLag: 0
+    timeRatio: ''
+    tooltip: ''
+    width: ''
+    yAxisBounds:
+    - null
+    - null
+  - bounds:
+    - null
+    - null
+    colType: avg
+    comparisonType: ''
+    d3format: $,.2f
+    dateFormat: ''
+    height: ''
+    key: WDAd6ma7t0Y
+    label: "\u0421\u0440\u0435\u0434\u043D\u0435\u0435"
+    popoverVisible: true
+    showYAxis: false
+    timeLag: 12
+    timeRatio: ''
+    tooltip: ''
+    width: ''
+    yAxisBounds:
+    - null
+    - null
+  row_limit: 10000
+  extra_form_data: {}
+  dashboards:
+  - 12
+query_context: "{\"datasource\":{\"id\":59,\"type\":\"table\"},\"force\":false,\"\
+  queries\":[{\"time_range\":\"No filter\",\"granularity\":\"order_month_date\",\"\
+  filters\":[],\"extras\":{\"time_grain_sqla\":\"P1D\",\"having\":\"\",\"where\":\"\
+  (DATE(DATE_TRUNC('month', order_date)) between \\n  DATE('\\n{% if filter_values('month_date')|length\
+  \ %}\\n\\t{{ filter_values('month_date')[0] }}\\n{% else %}\\n\\t2011-12-01\\n{%\
+  \ endif %}\\n') - interval '1 year' \\n  and DATE('\\n{% if filter_values('month_date')|length\
+  \ %}\\n\\t{{ filter_values('month_date')[0] }}\\n{% else %}\\n\\t2011-12-01\\n{%\
+  \ endif %}\\n'))\"},\"applied_time_extras\":{},\"columns\":[{\"expressionType\"\
+  :\"SQL\",\"label\":\"Product Category\",\"sqlExpression\":\"product_category\",\"\
+  datasourceWarning\":false}],\"metrics\":[{\"aggregate\":\"SUM\",\"column\":{\"advanced_data_type\"\
+  :null,\"certification_details\":null,\"certified_by\":null,\"column_name\":\"profit\"\
+  ,\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"\
+  id\":826,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"\
+  type\":\"REAL\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"\
+  datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"\
+  label\":\"profit\",\"optionName\":\"metric_z9is6vn3e8_maslczw5zu\",\"sqlExpression\"\
+  :null}],\"annotation_layers\":[],\"row_limit\":10000,\"series_limit\":0,\"order_desc\"\
+  :true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"form_data\"\
+  :{\"datasource\":\"59__table\",\"viz_type\":\"time_table\",\"slice_id\":211,\"granularity_sqla\"\
+  :\"order_month_date\",\"time_grain_sqla\":\"P1D\",\"time_range\":\"No filter\",\"\
+  metrics\":[{\"aggregate\":\"SUM\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"profit\",\"description\":null,\"expression\"\
+  :null,\"filterable\":true,\"groupby\":true,\"id\":826,\"is_certified\":false,\"\
+  is_dttm\":false,\"python_date_format\":null,\"type\":\"REAL\",\"type_generic\":0,\"\
+  verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\"\
+  :\"SIMPLE\",\"hasCustomLabel\":true,\"label\":\"profit\",\"optionName\":\"metric_z9is6vn3e8_maslczw5zu\"\
+  ,\"sqlExpression\":null}],\"adhoc_filters\":[{\"clause\":\"WHERE\",\"comparator\"\
+  :null,\"datasourceWarning\":false,\"expressionType\":\"SQL\",\"filterOptionName\"\
+  :\"filter_0c62d5ybilq_3k7k62c5wcy\",\"isExtra\":false,\"isNew\":false,\"operator\"\
+  :null,\"sqlExpression\":\"DATE(DATE_TRUNC('month', order_date)) between \\n  DATE('\\\
+  n{% if filter_values('month_date')|length %}\\n\\t{{ filter_values('month_date')[0]\
+  \ }}\\n{% else %}\\n\\t2011-12-01\\n{% endif %}\\n') - interval '1 year' \\n  and\
+  \ DATE('\\n{% if filter_values('month_date')|length %}\\n\\t{{ filter_values('month_date')[0]\
+  \ }}\\n{% else %}\\n\\t2011-12-01\\n{% endif %}\\n')\",\"subject\":null}],\"groupby\"\
+  :[{\"expressionType\":\"SQL\",\"label\":\"Product Category\",\"sqlExpression\":\"\
+  product_category\",\"datasourceWarning\":false}],\"column_collection\":[{\"bounds\"\
+  :[null,null],\"colType\":\"time\",\"comparisonType\":\"value\",\"d3format\":\"$,.2f\"\
+  ,\"dateFormat\":\"\",\"height\":\"\",\"key\":\"q_42ALy9oN-\",\"label\":\"\u041F\u0440\
+  \u0435\u0434. \u0433\u043E\u0434\",\"popoverVisible\":true,\"showYAxis\":false,\"\
+  timeLag\":12,\"timeRatio\":\"\",\"tooltip\":\"\",\"width\":\"\",\"yAxisBounds\"\
+  :[null,null]},{\"bounds\":[null,null],\"colType\":\"time\",\"comparisonType\":\"\
+  value\",\"d3format\":\"$,.2f\",\"dateFormat\":\"\",\"height\":\"\",\"key\":\"WEGU6yVN4_I\"\
+  ,\"label\":\"\u0422\u0435\u043A. \u0433\u043E\u0434\",\"popoverVisible\":true,\"\
+  showYAxis\":false,\"timeLag\":0,\"timeRatio\":\"\",\"tooltip\":\"\",\"width\":\"\
+  \",\"yAxisBounds\":[null,null]},{\"bounds\":[-1,1],\"colType\":\"time\",\"comparisonType\"\
+  :\"perc_change\",\"d3format\":\".2%\",\"dateFormat\":\"\",\"height\":\"\",\"key\"\
+  :\"TEMvOnAgscZ\",\"label\":\"YoY\",\"popoverVisible\":true,\"showYAxis\":false,\"\
+  timeLag\":12,\"timeRatio\":\"\",\"tooltip\":\"\",\"width\":\"\",\"yAxisBounds\"\
+  :[null,null]},{\"bounds\":[null,null],\"colType\":\"contrib\",\"comparisonType\"\
+  :\"\",\"d3format\":\".2%\",\"dateFormat\":\"\",\"height\":\"\",\"key\":\"s9cXOeGbtxn\"\
+  ,\"label\":\"\u0412\u043A\u043B\u0430\u0434\",\"popoverVisible\":true,\"showYAxis\"\
+  :false,\"timeLag\":0,\"timeRatio\":\"\",\"tooltip\":\"\",\"width\":\"\",\"yAxisBounds\"\
+  :[null,null]},{\"bounds\":[null,null],\"colType\":\"spark\",\"comparisonType\":\"\
+  value\",\"d3format\":\"$,.2f\",\"dateFormat\":\"%-Y %-b\",\"height\":\"\",\"key\"\
+  :\"oYO35xof6sL\",\"label\":\"\u0422\u0440\u0435\u043D\u0434\",\"popoverVisible\"\
+  :true,\"showYAxis\":true,\"timeLag\":0,\"timeRatio\":\"\",\"tooltip\":\"\",\"width\"\
+  :\"\",\"yAxisBounds\":[null,null]},{\"bounds\":[null,null],\"colType\":\"avg\",\"\
+  comparisonType\":\"\",\"d3format\":\"$,.2f\",\"dateFormat\":\"\",\"height\":\"\"\
+  ,\"key\":\"WDAd6ma7t0Y\",\"label\":\"\u0421\u0440\u0435\u0434\u043D\u0435\u0435\"\
+  ,\"popoverVisible\":true,\"showYAxis\":false,\"timeLag\":12,\"timeRatio\":\"\",\"\
+  tooltip\":\"\",\"width\":\"\",\"yAxisBounds\":[null,null]}],\"row_limit\":10000,\"\
+  extra_form_data\":{},\"dashboards\":[12],\"force\":false,\"result_format\":\"json\"\
+  ,\"result_type\":\"full\"},\"result_format\":\"json\",\"result_type\":\"full\"}"
+cache_timeout: null
+uuid: bb222cb8-a5ef-4e2c-9289-e682fcc6f542
+version: 1.0.0
+dataset_uuid: 877d9add-cc7e-4543-9600-221172e84883

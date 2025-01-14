@@ -1,0 +1,228 @@
+slice_name: "\u0422\u043E\u043F \u043F\u0440\u043E\u0434\u0443\u043A\u0442\u043E\u0432\
+  \ \u043F\u043E \u043F\u0440\u0438\u0431\u044B\u043B\u0438"
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 59__table
+  viz_type: table
+  slice_id: 208
+  query_mode: aggregate
+  groupby:
+  - expressionType: SQL
+    label: Product Name
+    sqlExpression: product_name
+  time_grain_sqla: P1M
+  temporal_columns_lookup:
+    order_date: true
+    order_month_date: true
+    ship_date: true
+  metrics:
+  - aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: profit
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 826
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: REAL
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: "\u041F\u0440\u0438\u0431\u044B\u043B\u044C"
+    optionName: metric_7c0oetkublc_6fpacdgkoj5
+    sqlExpression: null
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters:
+  - expressionType: SIMPLE
+    subject: order_date
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_0zttibcbdsmf_7i9gb967l8w
+  - expressionType: SQL
+    sqlExpression: "DATE(TO_CHAR(order_date, 'YYYY-mm-01')) = \n  DATE('\n{% if filter_values('month_date')|length\
+      \ %}\n\t{{ filter_values('month_date')[0] }}\n{% else %}\n\t2010-04-01\n{% endif\
+      \ %}\n')"
+    clause: WHERE
+    subject: null
+    operator: null
+    comparator: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_nueyoz156s_bhnik5xlklh
+  - expressionType: SQL
+    sqlExpression: "1=1 \n{% if filter_values('Product Sub-Category')|length %}\n\t\
+      AND product_subcategory = TRIM('{{ filter_values('Product Sub-Category')[0]\
+      \ }}')\n{% endif %}\n"
+    clause: WHERE
+    subject: null
+    operator: null
+    comparator: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_j3jb2tshtin_r0l1mjuaz3
+  - expressionType: SQL
+    sqlExpression: "1=1 \n{% if filter_values('Product Category')|length %}\n\tAND\
+      \ product_category = TRIM('{{ filter_values('Product Category')[0] }}')\n{%\
+      \ endif %}\n"
+    clause: WHERE
+    subject: null
+    operator: null
+    comparator: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_h6dd1v4o13p_icg5wbh5mh
+  timeseries_limit_metric:
+    aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: profit
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 826
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: REAL
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: SUM(profit)
+    optionName: metric_xalder99oqe_w71imuai3d
+    sqlExpression: null
+  order_by_cols: []
+  row_limit: 1000
+  order_desc: true
+  table_timestamp_format: smart_date
+  page_length: 0
+  include_search: false
+  allow_rearrange_columns: true
+  allow_render_html: true
+  column_config:
+    "\u041F\u0440\u0438\u0431\u044B\u043B\u044C":
+      alignPositiveNegative: false
+      colorPositiveNegative: false
+      columnWidth: 300
+      d3NumberFormat: $,.2f
+      d3SmallNumberFormat: $,.2f
+      horizontalAlign: left
+      showCellBars: true
+  show_cell_bars: true
+  color_pn: true
+  comparison_color_scheme: Green
+  conditional_formatting: []
+  comparison_type: values
+  extra_form_data: {}
+  dashboards:
+  - 12
+query_context: "{\"datasource\":{\"id\":59,\"type\":\"table\"},\"force\":false,\"\
+  queries\":[{\"filters\":[{\"col\":\"order_date\",\"op\":\"TEMPORAL_RANGE\",\"val\"\
+  :\"No filter\"}],\"extras\":{\"having\":\"\",\"where\":\"(DATE(TO_CHAR(order_date,\
+  \ 'YYYY-mm-01')) = \\n  DATE('\\n{% if filter_values('month_date')|length %}\\n\\\
+  t{{ filter_values('month_date')[0] }}\\n{% else %}\\n\\t2010-04-01\\n{% endif %}\\\
+  n')) AND (1=1 \\n{% if filter_values('Product Sub-Category')|length %}\\n\\tAND\
+  \ product_subcategory = TRIM('{{ filter_values('Product Sub-Category')[0] }}')\\\
+  n{% endif %}\\n) AND (1=1 \\n{% if filter_values('Product Category')|length %}\\\
+  n\\tAND product_category = TRIM('{{ filter_values('Product Category')[0] }}')\\\
+  n{% endif %}\\n)\"},\"applied_time_extras\":{},\"columns\":[{\"expressionType\"\
+  :\"SQL\",\"label\":\"Product Name\",\"sqlExpression\":\"product_name\"}],\"metrics\"\
+  :[{\"aggregate\":\"SUM\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"profit\",\"description\":null,\"expression\"\
+  :null,\"filterable\":true,\"groupby\":true,\"id\":826,\"is_certified\":false,\"\
+  is_dttm\":false,\"python_date_format\":null,\"type\":\"REAL\",\"type_generic\":0,\"\
+  verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\"\
+  :\"SIMPLE\",\"hasCustomLabel\":true,\"label\":\"\u041F\u0440\u0438\u0431\u044B\u043B\
+  \u044C\",\"optionName\":\"metric_7c0oetkublc_6fpacdgkoj5\",\"sqlExpression\":null}],\"\
+  orderby\":[[{\"aggregate\":\"SUM\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"profit\",\"description\":null,\"expression\"\
+  :null,\"filterable\":true,\"groupby\":true,\"id\":826,\"is_certified\":false,\"\
+  is_dttm\":false,\"python_date_format\":null,\"type\":\"REAL\",\"type_generic\":0,\"\
+  verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\"\
+  :\"SIMPLE\",\"hasCustomLabel\":false,\"label\":\"SUM(profit)\",\"optionName\":\"\
+  metric_xalder99oqe_w71imuai3d\",\"sqlExpression\":null},false]],\"annotation_layers\"\
+  :[],\"row_limit\":1000,\"series_limit\":0,\"series_limit_metric\":{\"aggregate\"\
+  :\"SUM\",\"column\":{\"advanced_data_type\":null,\"certification_details\":null,\"\
+  certified_by\":null,\"column_name\":\"profit\",\"description\":null,\"expression\"\
+  :null,\"filterable\":true,\"groupby\":true,\"id\":826,\"is_certified\":false,\"\
+  is_dttm\":false,\"python_date_format\":null,\"type\":\"REAL\",\"type_generic\":0,\"\
+  verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\"\
+  :\"SIMPLE\",\"hasCustomLabel\":false,\"label\":\"SUM(profit)\",\"optionName\":\"\
+  metric_xalder99oqe_w71imuai3d\",\"sqlExpression\":null},\"order_desc\":true,\"url_params\"\
+  :{},\"custom_params\":{},\"custom_form_data\":{},\"post_processing\":[],\"time_offsets\"\
+  :[]}],\"form_data\":{\"datasource\":\"59__table\",\"viz_type\":\"table\",\"slice_id\"\
+  :208,\"query_mode\":\"aggregate\",\"groupby\":[{\"expressionType\":\"SQL\",\"label\"\
+  :\"Product Name\",\"sqlExpression\":\"product_name\"}],\"time_grain_sqla\":\"P1M\"\
+  ,\"temporal_columns_lookup\":{\"order_date\":true,\"order_month_date\":true,\"ship_date\"\
+  :true},\"metrics\":[{\"aggregate\":\"SUM\",\"column\":{\"advanced_data_type\":null,\"\
+  certification_details\":null,\"certified_by\":null,\"column_name\":\"profit\",\"\
+  description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\"\
+  :826,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\"\
+  :\"REAL\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"\
+  datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"\
+  label\":\"\u041F\u0440\u0438\u0431\u044B\u043B\u044C\",\"optionName\":\"metric_7c0oetkublc_6fpacdgkoj5\"\
+  ,\"sqlExpression\":null}],\"all_columns\":[],\"percent_metrics\":[],\"adhoc_filters\"\
+  :[{\"expressionType\":\"SIMPLE\",\"subject\":\"order_date\",\"operator\":\"TEMPORAL_RANGE\"\
+  ,\"comparator\":\"No filter\",\"clause\":\"WHERE\",\"sqlExpression\":null,\"isExtra\"\
+  :false,\"isNew\":false,\"datasourceWarning\":false,\"filterOptionName\":\"filter_0zttibcbdsmf_7i9gb967l8w\"\
+  },{\"expressionType\":\"SQL\",\"sqlExpression\":\"DATE(TO_CHAR(order_date, 'YYYY-mm-01'))\
+  \ = \\n  DATE('\\n{% if filter_values('month_date')|length %}\\n\\t{{ filter_values('month_date')[0]\
+  \ }}\\n{% else %}\\n\\t2010-04-01\\n{% endif %}\\n')\",\"clause\":\"WHERE\",\"subject\"\
+  :null,\"operator\":null,\"comparator\":null,\"isExtra\":false,\"isNew\":false,\"\
+  datasourceWarning\":false,\"filterOptionName\":\"filter_nueyoz156s_bhnik5xlklh\"\
+  },{\"expressionType\":\"SQL\",\"sqlExpression\":\"1=1 \\n{% if filter_values('Product\
+  \ Sub-Category')|length %}\\n\\tAND product_subcategory = TRIM('{{ filter_values('Product\
+  \ Sub-Category')[0] }}')\\n{% endif %}\\n\",\"clause\":\"WHERE\",\"subject\":null,\"\
+  operator\":null,\"comparator\":null,\"isExtra\":false,\"isNew\":false,\"datasourceWarning\"\
+  :false,\"filterOptionName\":\"filter_j3jb2tshtin_r0l1mjuaz3\"},{\"expressionType\"\
+  :\"SQL\",\"sqlExpression\":\"1=1 \\n{% if filter_values('Product Category')|length\
+  \ %}\\n\\tAND product_category = TRIM('{{ filter_values('Product Category')[0] }}')\\\
+  n{% endif %}\\n\",\"clause\":\"WHERE\",\"subject\":null,\"operator\":null,\"comparator\"\
+  :null,\"isExtra\":false,\"isNew\":false,\"datasourceWarning\":false,\"filterOptionName\"\
+  :\"filter_h6dd1v4o13p_icg5wbh5mh\"}],\"timeseries_limit_metric\":{\"aggregate\"\
+  :\"SUM\",\"column\":{\"advanced_data_type\":null,\"certification_details\":null,\"\
+  certified_by\":null,\"column_name\":\"profit\",\"description\":null,\"expression\"\
+  :null,\"filterable\":true,\"groupby\":true,\"id\":826,\"is_certified\":false,\"\
+  is_dttm\":false,\"python_date_format\":null,\"type\":\"REAL\",\"type_generic\":0,\"\
+  verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\"\
+  :\"SIMPLE\",\"hasCustomLabel\":false,\"label\":\"SUM(profit)\",\"optionName\":\"\
+  metric_xalder99oqe_w71imuai3d\",\"sqlExpression\":null},\"order_by_cols\":[],\"\
+  row_limit\":1000,\"order_desc\":true,\"table_timestamp_format\":\"smart_date\",\"\
+  page_length\":0,\"include_search\":false,\"allow_rearrange_columns\":true,\"allow_render_html\"\
+  :true,\"column_config\":{\"\u041F\u0440\u0438\u0431\u044B\u043B\u044C\":{\"alignPositiveNegative\"\
+  :false,\"colorPositiveNegative\":false,\"columnWidth\":300,\"d3NumberFormat\":\"\
+  $,.2f\",\"d3SmallNumberFormat\":\"$,.2f\",\"horizontalAlign\":\"left\",\"showCellBars\"\
+  :true}},\"show_cell_bars\":true,\"color_pn\":true,\"comparison_color_scheme\":\"\
+  Green\",\"conditional_formatting\":[],\"comparison_type\":\"values\",\"extra_form_data\"\
+  :{},\"dashboards\":[12],\"force\":false,\"result_format\":\"json\",\"result_type\"\
+  :\"full\"},\"result_format\":\"json\",\"result_type\":\"full\"}"
+cache_timeout: null
+uuid: 3847b778-b922-4b8a-9f1a-751dbf84bfd9
+version: 1.0.0
+dataset_uuid: 877d9add-cc7e-4543-9600-221172e84883

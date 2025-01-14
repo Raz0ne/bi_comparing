@@ -1,0 +1,138 @@
+slice_name: "\u0424\u0430\u043A\u0442\u043E\u0438\u0434 \u043F\u043E \u0441\u0440\u0435\
+  \u0434\u043D\u0435\u0439 \u0441\u043A\u0438\u0434\u043A\u0435"
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number
+params:
+  datasource: 59__table
+  viz_type: big_number
+  slice_id: 200
+  x_axis:
+    label: order_date
+    sqlExpression: TO_CHAR(order_date, 'YYYY-MM-02')
+    expressionType: SQL
+  time_grain_sqla: P1M
+  metric:
+    aggregate: AVG
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: discount
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 824
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: REAL
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: "\u0421\u0440\u0435\u0434\u043D\u044F\u044F \u0441\u043A\u0438\u0434\u043A\
+      \u0430"
+    optionName: metric_0sbarac1v3xg_16msvrgkc6g
+    sqlExpression: null
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_j4x1yc3j5pa_vapird6746
+    isExtra: false
+    isNew: false
+    operator: TEMPORAL_RANGE
+    sqlExpression: null
+    subject: order_date
+  - clause: WHERE
+    comparator: null
+    datasourceWarning: false
+    expressionType: SQL
+    filterOptionName: filter_0hfica1q95vq_uz5l0l5x4dg
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: "DATE(TO_CHAR(order_date, 'YYYY-mm-01')) between \n  DATE('\n{%\
+      \ if filter_values('month_date')|length %}\n\t{{ filter_values('month_date')[0]\
+      \ }}\n{% else %}\n\t2010-04-01\n{% endif %}\n') - interval '1 year' \n  and\
+      \ DATE('\n{% if filter_values('month_date')|length %}\n\t{{ filter_values('month_date')[0]\
+      \ }}\n{% else %}\n\t2010-04-01\n{% endif %}\n')"
+    subject: null
+  compare_lag: 12
+  compare_suffix: YoY
+  show_timestamp: false
+  show_trend_line: true
+  start_y_axis_at_zero: false
+  color_picker:
+    a: 1
+    b: 135
+    g: 122
+    r: 0
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: .3%
+  time_format: smart_date
+  rolling_type: None
+  extra_form_data: {}
+  dashboards:
+  - 12
+query_context: "{\"datasource\":{\"id\":59,\"type\":\"table\"},\"force\":false,\"\
+  queries\":[{\"filters\":[{\"col\":\"order_date\",\"op\":\"TEMPORAL_RANGE\",\"val\"\
+  :\"No filter\"}],\"extras\":{\"time_grain_sqla\":\"P1M\",\"having\":\"\",\"where\"\
+  :\"(DATE(TO_CHAR(order_date, 'YYYY-mm-01')) between \\n  DATE('\\n{% if filter_values('month_date')|length\
+  \ %}\\n\\t{{ filter_values('month_date')[0] }}\\n{% else %}\\n\\t2010-04-01\\n{%\
+  \ endif %}\\n') - interval '1 year' \\n  and DATE('\\n{% if filter_values('month_date')|length\
+  \ %}\\n\\t{{ filter_values('month_date')[0] }}\\n{% else %}\\n\\t2010-04-01\\n{%\
+  \ endif %}\\n'))\"},\"applied_time_extras\":{},\"columns\":[{\"timeGrain\":\"P1M\"\
+  ,\"columnType\":\"BASE_AXIS\",\"label\":\"order_date\",\"sqlExpression\":\"TO_CHAR(order_date,\
+  \ 'YYYY-MM-02')\",\"expressionType\":\"SQL\"}],\"metrics\":[{\"aggregate\":\"AVG\"\
+  ,\"column\":{\"advanced_data_type\":null,\"certification_details\":null,\"certified_by\"\
+  :null,\"column_name\":\"discount\",\"description\":null,\"expression\":null,\"filterable\"\
+  :true,\"groupby\":true,\"id\":824,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\"\
+  :null,\"type\":\"REAL\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\"\
+  :null},\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\"\
+  :true,\"label\":\"\u0421\u0440\u0435\u0434\u043D\u044F\u044F \u0441\u043A\u0438\u0434\
+  \u043A\u0430\",\"optionName\":\"metric_0sbarac1v3xg_16msvrgkc6g\",\"sqlExpression\"\
+  :null}],\"annotation_layers\":[],\"series_limit\":0,\"order_desc\":true,\"url_params\"\
+  :{},\"custom_params\":{},\"custom_form_data\":{},\"post_processing\":[{\"operation\"\
+  :\"pivot\",\"options\":{\"index\":[\"order_date\"],\"columns\":[],\"aggregates\"\
+  :{\"\u0421\u0440\u0435\u0434\u043D\u044F\u044F \u0441\u043A\u0438\u0434\u043A\u0430\
+  \":{\"operator\":\"mean\"}},\"drop_missing_columns\":true}},{\"operation\":\"flatten\"\
+  }]}],\"form_data\":{\"datasource\":\"59__table\",\"viz_type\":\"big_number\",\"\
+  slice_id\":200,\"x_axis\":{\"label\":\"order_date\",\"sqlExpression\":\"TO_CHAR(order_date,\
+  \ 'YYYY-MM-02')\",\"expressionType\":\"SQL\"},\"time_grain_sqla\":\"P1M\",\"metric\"\
+  :{\"aggregate\":\"AVG\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"discount\",\"description\":null,\"\
+  expression\":null,\"filterable\":true,\"groupby\":true,\"id\":824,\"is_certified\"\
+  :false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"REAL\",\"type_generic\"\
+  :0,\"verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"\
+  expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"label\":\"\u0421\u0440\u0435\
+  \u0434\u043D\u044F\u044F \u0441\u043A\u0438\u0434\u043A\u0430\",\"optionName\":\"\
+  metric_0sbarac1v3xg_16msvrgkc6g\",\"sqlExpression\":null},\"adhoc_filters\":[{\"\
+  clause\":\"WHERE\",\"comparator\":\"No filter\",\"datasourceWarning\":false,\"expressionType\"\
+  :\"SIMPLE\",\"filterOptionName\":\"filter_j4x1yc3j5pa_vapird6746\",\"isExtra\":false,\"\
+  isNew\":false,\"operator\":\"TEMPORAL_RANGE\",\"sqlExpression\":null,\"subject\"\
+  :\"order_date\"},{\"clause\":\"WHERE\",\"comparator\":null,\"datasourceWarning\"\
+  :false,\"expressionType\":\"SQL\",\"filterOptionName\":\"filter_0hfica1q95vq_uz5l0l5x4dg\"\
+  ,\"isExtra\":false,\"isNew\":false,\"operator\":null,\"sqlExpression\":\"DATE(TO_CHAR(order_date,\
+  \ 'YYYY-mm-01')) between \\n  DATE('\\n{% if filter_values('month_date')|length\
+  \ %}\\n\\t{{ filter_values('month_date')[0] }}\\n{% else %}\\n\\t2010-04-01\\n{%\
+  \ endif %}\\n') - interval '1 year' \\n  and DATE('\\n{% if filter_values('month_date')|length\
+  \ %}\\n\\t{{ filter_values('month_date')[0] }}\\n{% else %}\\n\\t2010-04-01\\n{%\
+  \ endif %}\\n')\",\"subject\":null}],\"compare_lag\":12,\"compare_suffix\":\"YoY\"\
+  ,\"show_timestamp\":false,\"show_trend_line\":true,\"start_y_axis_at_zero\":false,\"\
+  color_picker\":{\"a\":1,\"b\":135,\"g\":122,\"r\":0},\"header_font_size\":0.4,\"\
+  subheader_font_size\":0.15,\"y_axis_format\":\".3%\",\"time_format\":\"smart_date\"\
+  ,\"rolling_type\":\"None\",\"extra_form_data\":{},\"dashboards\":[12],\"force\"\
+  :false,\"result_format\":\"json\",\"result_type\":\"full\"},\"result_format\":\"\
+  json\",\"result_type\":\"full\"}"
+cache_timeout: null
+uuid: dac570c5-bdd1-4f0b-8557-794a9d9e1b49
+version: 1.0.0
+dataset_uuid: 877d9add-cc7e-4543-9600-221172e84883

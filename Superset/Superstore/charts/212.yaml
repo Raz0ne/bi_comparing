@@ -1,0 +1,110 @@
+slice_name: "\u0412\u043A\u043B\u0430\u0434 \u043A\u0430\u0442\u0435\u0433\u043E\u0440\
+  \u0438\u0439"
+description: null
+certified_by: null
+certification_details: null
+viz_type: rose
+params:
+  datasource: 59__table
+  viz_type: rose
+  slice_id: 212
+  granularity_sqla: order_month_date
+  time_grain_sqla: P1D
+  time_range: No filter
+  metrics:
+  - aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: sales
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 823
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: REAL
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: SUM(sales)
+    optionName: metric_l150e0hvpq_nhccow85t0j
+    sqlExpression: null
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    datasourceWarning: false
+    expressionType: SQL
+    filterOptionName: filter_14mhmmuoazk_ot51yaiie5
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: "DATE(TO_CHAR(order_date, 'YYYY-mm-01')) between \n  DATE('\n{%\
+      \ if filter_values('month_date')|length %}\n\t{{ filter_values('month_date')[0]\
+      \ }}\n{% else %}\n\t2011-12-01\n{% endif %}\n') - interval '11 months' \n  and\
+      \ DATE('\n{% if filter_values('month_date')|length %}\n\t{{ filter_values('month_date')[0]\
+      \ }}\n{% else %}\n\t2011-12-01\n{% endif %}\n')"
+    subject: null
+  groupby:
+  - product_category
+  timeseries_limit_metric:
+    aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: sales
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 823
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: REAL
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: SUM(sales)
+    optionName: metric_66jcek7y7t_jo6r6vd4zna
+    sqlExpression: null
+  order_desc: false
+  contribution: false
+  row_limit: 10000
+  color_scheme: supersetColors
+  number_format: SMART_NUMBER
+  date_time_format: '%b %Y'
+  rich_tooltip: true
+  rolling_type: None
+  comparison_type: values
+  extra_form_data: {}
+  dashboards:
+  - 12
+query_context: '{"datasource":{"id":59,"type":"table"},"force":false,"queries":[{"time_range":"No
+  filter","granularity":"order_month_date","filters":[],"extras":{"time_grain_sqla":"P1D","having":"","where":"(DATE(TO_CHAR(order_date,
+  ''YYYY-mm-01'')) between \n  DATE(''\n{% if filter_values(''month_date'')|length
+  %}\n\t{{ filter_values(''month_date'')[0] }}\n{% else %}\n\t2011-12-01\n{% endif
+  %}\n'') - interval ''11 months'' \n  and DATE(''\n{% if filter_values(''month_date'')|length
+  %}\n\t{{ filter_values(''month_date'')[0] }}\n{% else %}\n\t2011-12-01\n{% endif
+  %}\n''))"},"applied_time_extras":{},"columns":["product_category"],"metrics":[{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"sales","description":null,"expression":null,"filterable":true,"groupby":true,"id":823,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"REAL","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"SUM(sales)","optionName":"metric_l150e0hvpq_nhccow85t0j","sqlExpression":null}],"annotation_layers":[],"row_limit":10000,"series_limit":0,"series_limit_metric":{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"sales","description":null,"expression":null,"filterable":true,"groupby":true,"id":823,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"REAL","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"SUM(sales)","optionName":"metric_66jcek7y7t_jo6r6vd4zna","sqlExpression":null},"order_desc":false,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"59__table","viz_type":"rose","slice_id":212,"granularity_sqla":"order_month_date","time_grain_sqla":"P1D","time_range":"No
+  filter","metrics":[{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"sales","description":null,"expression":null,"filterable":true,"groupby":true,"id":823,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"REAL","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"SUM(sales)","optionName":"metric_l150e0hvpq_nhccow85t0j","sqlExpression":null}],"adhoc_filters":[{"clause":"WHERE","comparator":null,"datasourceWarning":false,"expressionType":"SQL","filterOptionName":"filter_14mhmmuoazk_ot51yaiie5","isExtra":false,"isNew":false,"operator":null,"sqlExpression":"DATE(TO_CHAR(order_date,
+  ''YYYY-mm-01'')) between \n  DATE(''\n{% if filter_values(''month_date'')|length
+  %}\n\t{{ filter_values(''month_date'')[0] }}\n{% else %}\n\t2011-12-01\n{% endif
+  %}\n'') - interval ''11 months'' \n  and DATE(''\n{% if filter_values(''month_date'')|length
+  %}\n\t{{ filter_values(''month_date'')[0] }}\n{% else %}\n\t2011-12-01\n{% endif
+  %}\n'')","subject":null}],"groupby":["product_category"],"timeseries_limit_metric":{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"sales","description":null,"expression":null,"filterable":true,"groupby":true,"id":823,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"REAL","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"SUM(sales)","optionName":"metric_66jcek7y7t_jo6r6vd4zna","sqlExpression":null},"order_desc":false,"contribution":false,"row_limit":10000,"color_scheme":"supersetColors","number_format":"SMART_NUMBER","date_time_format":"%b
+  %Y","rich_tooltip":true,"rolling_type":"None","comparison_type":"values","extra_form_data":{},"dashboards":[12],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: c5e9b313-b35a-4ddb-b5af-9dc8c662d708
+version: 1.0.0
+dataset_uuid: 877d9add-cc7e-4543-9600-221172e84883

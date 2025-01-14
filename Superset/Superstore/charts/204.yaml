@@ -1,0 +1,231 @@
+slice_name: "\u0414\u0438\u043D\u0430\u043C\u0438\u043A\u0430 \u043F\u0440\u0438\u0431\
+  \u044B\u043B\u0438"
+description: null
+certified_by: null
+certification_details: null
+viz_type: mixed_timeseries
+params:
+  datasource: 59__table
+  viz_type: mixed_timeseries
+  slice_id: 204
+  x_axis:
+    label: order_date
+    sqlExpression: TO_CHAR(order_date, 'YYYY-mm')
+    expressionType: SQL
+  metrics:
+  - aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: profit
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 826
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: REAL
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: "\u041F\u0440\u0438\u0431\u044B\u043B\u044C, $"
+    optionName: metric_v9s6ugb69h_5rddblkgvgh
+    sqlExpression: null
+  groupby: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: order_date
+  order_desc: true
+  row_limit: 10000
+  truncate_metric: true
+  comparison_type: values
+  metrics_b:
+  - aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: profit
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 826
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: REAL
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: "\u041F\u0440\u0435\u0434\u044B\u0434\u0443\u0449\u0438\u0439 \u0438 \u0442\
+      \u0435\u043A\u0443\u0449\u0438\u0439 \u0433\u043E\u0434, $"
+    optionName: metric_nf6eydldjg_7bpijiona8w
+    sqlExpression: null
+  groupby_b: []
+  adhoc_filters_b:
+  - clause: WHERE
+    comparator: No filter
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_mfksjgw610m_tpqxpidpdio
+    isExtra: false
+    isNew: false
+    operator: TEMPORAL_RANGE
+    sqlExpression: null
+    subject: order_date
+  - clause: WHERE
+    comparator: null
+    datasourceWarning: false
+    expressionType: SQL
+    filterOptionName: filter_ahhmmj3t3xg_17ilwah5qzx
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: "DATE(TO_CHAR(order_date, 'YYYY-mm-01')) in ( \n  DATE('\n{% if\
+      \ filter_values('month_date')|length %}\n\t{{ filter_values('month_date')[0]\
+      \ }}\n{% else %}\n\t2010-04-01\n{% endif %}\n') - interval '1 year' \n  , DATE('\n\
+      {% if filter_values('month_date')|length %}\n\t{{ filter_values('month_date')[0]\
+      \ }}\n{% else %}\n\t2010-04-01\n{% endif %}\n'))"
+    subject: null
+  order_desc_b: true
+  row_limit_b: 10000
+  truncate_metric_b: true
+  comparison_type_b: values
+  annotation_layers: []
+  x_axis_title_margin: 15
+  y_axis_title_margin: 15
+  y_axis_title_position: Left
+  color_scheme: supersetColors
+  seriesType: line
+  stack: false
+  area: false
+  show_value: false
+  opacity: 0.2
+  markerEnabled: false
+  markerSize: 6
+  yAxisIndex: 0
+  seriesTypeB: line
+  stackB: false
+  areaB: false
+  show_valueB: false
+  opacityB: 0.2
+  markerEnabledB: true
+  markerSizeB: 6
+  yAxisIndexB: 0
+  zoomable: false
+  minorTicks: false
+  show_legend: false
+  x_axis_time_format: smart_date
+  rich_tooltip: true
+  tooltipTimeFormat: smart_date
+  minorSplitLine: false
+  truncateXAxis: true
+  y_axis_bounds:
+  - null
+  - null
+  y_axis_format: SMART_NUMBER
+  logAxis: false
+  y_axis_bounds_secondary:
+  - null
+  - null
+  y_axis_format_secondary: SMART_NUMBER
+  extra_form_data: {}
+  dashboards:
+  - 12
+query_context: "{\"datasource\":{\"id\":59,\"type\":\"table\"},\"force\":false,\"\
+  queries\":[{\"filters\":[{\"col\":\"order_date\",\"op\":\"TEMPORAL_RANGE\",\"val\"\
+  :\"No filter\"}],\"extras\":{\"having\":\"\",\"where\":\"\"},\"applied_time_extras\"\
+  :{},\"columns\":[{\"columnType\":\"BASE_AXIS\",\"label\":\"order_date\",\"sqlExpression\"\
+  :\"TO_CHAR(order_date, 'YYYY-mm')\",\"expressionType\":\"SQL\"}],\"metrics\":[{\"\
+  aggregate\":\"SUM\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"profit\",\"description\":null,\"expression\"\
+  :null,\"filterable\":true,\"groupby\":true,\"id\":826,\"is_certified\":false,\"\
+  is_dttm\":false,\"python_date_format\":null,\"type\":\"REAL\",\"type_generic\":0,\"\
+  verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\"\
+  :\"SIMPLE\",\"hasCustomLabel\":true,\"label\":\"\u041F\u0440\u0438\u0431\u044B\u043B\
+  \u044C, $\",\"optionName\":\"metric_v9s6ugb69h_5rddblkgvgh\",\"sqlExpression\":null}],\"\
+  annotation_layers\":[],\"row_limit\":10000,\"series_columns\":[],\"series_limit\"\
+  :0,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"time_offsets\"\
+  :[],\"post_processing\":[{\"operation\":\"pivot\",\"options\":{\"index\":[\"order_date\"\
+  ],\"columns\":[],\"aggregates\":{\"\u041F\u0440\u0438\u0431\u044B\u043B\u044C, $\"\
+  :{\"operator\":\"mean\"}},\"drop_missing_columns\":true}},{\"operation\":\"flatten\"\
+  }],\"orderby\":[[{\"aggregate\":\"SUM\",\"column\":{\"advanced_data_type\":null,\"\
+  certification_details\":null,\"certified_by\":null,\"column_name\":\"profit\",\"\
+  description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\"\
+  :826,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\"\
+  :\"REAL\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"\
+  datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"\
+  label\":\"\u041F\u0440\u0438\u0431\u044B\u043B\u044C, $\",\"optionName\":\"metric_v9s6ugb69h_5rddblkgvgh\"\
+  ,\"sqlExpression\":null},false]]},{\"filters\":[{\"col\":\"order_date\",\"op\":\"\
+  TEMPORAL_RANGE\",\"val\":\"No filter\"}],\"extras\":{\"having\":\"\",\"where\":\"\
+  (DATE(TO_CHAR(order_date, 'YYYY-mm-01')) in ( \\n  DATE('\\n{% if filter_values('month_date')|length\
+  \ %}\\n\\t{{ filter_values('month_date')[0] }}\\n{% else %}\\n\\t2010-04-01\\n{%\
+  \ endif %}\\n') - interval '1 year' \\n  , DATE('\\n{% if filter_values('month_date')|length\
+  \ %}\\n\\t{{ filter_values('month_date')[0] }}\\n{% else %}\\n\\t2010-04-01\\n{%\
+  \ endif %}\\n')))\"},\"applied_time_extras\":{},\"columns\":[{\"columnType\":\"\
+  BASE_AXIS\",\"label\":\"order_date\",\"sqlExpression\":\"TO_CHAR(order_date, 'YYYY-mm')\"\
+  ,\"expressionType\":\"SQL\"}],\"metrics\":[{\"aggregate\":\"SUM\",\"column\":{\"\
+  advanced_data_type\":null,\"certification_details\":null,\"certified_by\":null,\"\
+  column_name\":\"profit\",\"description\":null,\"expression\":null,\"filterable\"\
+  :true,\"groupby\":true,\"id\":826,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\"\
+  :null,\"type\":\"REAL\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\"\
+  :null},\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\"\
+  :true,\"label\":\"\u041F\u0440\u0435\u0434\u044B\u0434\u0443\u0449\u0438\u0439 \u0438\
+  \ \u0442\u0435\u043A\u0443\u0449\u0438\u0439 \u0433\u043E\u0434, $\",\"optionName\"\
+  :\"metric_nf6eydldjg_7bpijiona8w\",\"sqlExpression\":null}],\"annotation_layers\"\
+  :[],\"row_limit\":10000,\"series_columns\":[],\"series_limit\":0,\"url_params\"\
+  :{},\"custom_params\":{},\"custom_form_data\":{},\"time_offsets\":[],\"post_processing\"\
+  :[{\"operation\":\"pivot\",\"options\":{\"index\":[\"order_date\"],\"columns\":[],\"\
+  aggregates\":{\"\u041F\u0440\u0435\u0434\u044B\u0434\u0443\u0449\u0438\u0439 \u0438\
+  \ \u0442\u0435\u043A\u0443\u0449\u0438\u0439 \u0433\u043E\u0434, $\":{\"operator\"\
+  :\"mean\"}},\"drop_missing_columns\":true}},{\"operation\":\"flatten\"}],\"orderby\"\
+  :[[{\"aggregate\":\"SUM\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"profit\",\"description\":null,\"expression\"\
+  :null,\"filterable\":true,\"groupby\":true,\"id\":826,\"is_certified\":false,\"\
+  is_dttm\":false,\"python_date_format\":null,\"type\":\"REAL\",\"type_generic\":0,\"\
+  verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"expressionType\"\
+  :\"SIMPLE\",\"hasCustomLabel\":true,\"label\":\"\u041F\u0440\u0435\u0434\u044B\u0434\
+  \u0443\u0449\u0438\u0439 \u0438 \u0442\u0435\u043A\u0443\u0449\u0438\u0439 \u0433\
+  \u043E\u0434, $\",\"optionName\":\"metric_nf6eydldjg_7bpijiona8w\",\"sqlExpression\"\
+  :null},false]]}],\"form_data\":{\"datasource\":\"59__table\",\"viz_type\":\"mixed_timeseries\"\
+  ,\"slice_id\":204,\"x_axis\":{\"label\":\"order_date\",\"sqlExpression\":\"TO_CHAR(order_date,\
+  \ 'YYYY-mm')\",\"expressionType\":\"SQL\"},\"metrics\":[{\"aggregate\":\"SUM\",\"\
+  column\":{\"advanced_data_type\":null,\"certification_details\":null,\"certified_by\"\
+  :null,\"column_name\":\"profit\",\"description\":null,\"expression\":null,\"filterable\"\
+  :true,\"groupby\":true,\"id\":826,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\"\
+  :null,\"type\":\"REAL\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\"\
+  :null},\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\"\
+  :true,\"label\":\"\u041F\u0440\u0438\u0431\u044B\u043B\u044C, $\",\"optionName\"\
+  :\"metric_v9s6ugb69h_5rddblkgvgh\",\"sqlExpression\":null}],\"groupby\":[],\"adhoc_filters\"\
+  :[{\"clause\":\"WHERE\",\"comparator\":\"No filter\",\"expressionType\":\"SIMPLE\"\
+  ,\"operator\":\"TEMPORAL_RANGE\",\"subject\":\"order_date\"}],\"order_desc\":true,\"\
+  row_limit\":10000,\"truncate_metric\":true,\"comparison_type\":\"values\",\"annotation_layers\"\
+  :[],\"x_axis_title_margin\":15,\"y_axis_title_margin\":15,\"y_axis_title_position\"\
+  :\"Left\",\"color_scheme\":\"supersetColors\",\"seriesType\":\"line\",\"stack\"\
+  :false,\"area\":false,\"show_value\":false,\"opacity\":0.2,\"markerEnabled\":false,\"\
+  markerSize\":6,\"yAxisIndex\":0,\"seriesTypeB\":\"line\",\"stackB\":false,\"areaB\"\
+  :false,\"show_valueB\":false,\"opacityB\":0.2,\"markerEnabledB\":true,\"markerSizeB\"\
+  :6,\"yAxisIndexB\":0,\"zoomable\":false,\"minorTicks\":false,\"show_legend\":false,\"\
+  x_axis_time_format\":\"smart_date\",\"rich_tooltip\":true,\"tooltipTimeFormat\"\
+  :\"smart_date\",\"minorSplitLine\":false,\"truncateXAxis\":true,\"y_axis_bounds\"\
+  :[null,null],\"y_axis_format\":\"SMART_NUMBER\",\"logAxis\":false,\"y_axis_bounds_secondary\"\
+  :[null,null],\"y_axis_format_secondary\":\"SMART_NUMBER\",\"extra_form_data\":{},\"\
+  dashboards\":[12],\"force\":false,\"result_format\":\"json\",\"result_type\":\"\
+  full\"},\"result_format\":\"json\",\"result_type\":\"full\"}"
+cache_timeout: null
+uuid: 6608ecbe-87b7-40fe-b4f8-d77568ff5e6b
+version: 1.0.0
+dataset_uuid: 877d9add-cc7e-4543-9600-221172e84883
